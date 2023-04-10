@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* -------------------------------- primer página -------------------------- */
+
+/* __________ encabezado ___________ */
+
+.header-index {
+    padding: 10px 20px;
+    background: #dc143c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+a {
+    color: black;
+}
+
+.ul-index {
+    display: flex;
+    gap: 20px;
+}
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px) {
+    .ul-index {
+        gap: 10px;
+    }
+    .header-index {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* para movil */
+
+@media (max-width:650px) {
+    .ul-index {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* __________ main / cuerpo ___________ */
+
+.main-index {
+    background: rgb(202,127,141);
+    height: 75vh;
+}
+
+.imagenes-index {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px) {
+    .main-index {
+        height: 100%;
+    }
+    .foto1 {
+        width: 300px;
+    }
+    .foto2 {
+        width: 300px;
+    }
+}
+
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .main-index {
+        height: 100%;
+    }
+    .imagenes-index {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .foto1 {
+        width: 300px;
+    }
+    .foto2 {
+        width: 300px;
+    }
+}
+
+
+/* __________ footer ___________ */
+
+.footer-index {
+    background: #dc143c;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px){
+    .footer-index {
+        padding: 10px;
+    }
+}
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .footer-index {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* -------------------------------- segunda página -------------------------- */
+
+/* __________ main / cuerpo ___________ */
+
+.main-index{
+    background:  rgb(202,127,141);
+    height: 100%;
+}
+
+.galeria {
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6";
+}
+
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+.img6 {
+    grid-area: img6;
+}
+
+
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px){
+    .galeria {
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "img1 img2"
+        "img3 img4"
+        "img5 img6";
+    }
+    .img1 {
+        grid-area: img1;
+    }
+    .img2 {
+        grid-area: img2;
+    }
+    .img3 {
+        grid-area: img3;
+    }
+    .img4 {
+        grid-area: img4;
+    }
+    .img5 {
+        grid-area: img5;
+    }
+    .img6 {
+        grid-area: img6;
+    }
+}
+
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+/* -------------------------------- tercera página -------------------------- */
+
+.titulo-productos {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+
+.img-productos {
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "producto1 producto2" 
+    "producto3 producto4"
+    "producto5 producto6"
+    "producto7 producto8";
+}
+.producto1 {
+    grid-area: producto1;
+}
+.producto2 {
+    grid-area: producto2;
+}
+.producto3 {
+    grid-area: producto3;
+}
+.producto4 {
+    grid-area: producto4;
+}
+.producto5 {
+    grid-area: producto5;
+}
+.producto6 {
+    grid-area: producto6;
+}
+.producto7 {
+    grid-area: producto7;
+}
+
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px){
+    .img-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .img-productos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+/* -------------------------------- cuarta página -------------------------- */
+
+.titulo-pag-maquillaje {
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.img-maquillajes {
+    padding: 20px;
+    gap: 15px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:repeat(3, 1fr) ;
+    grid-template-areas:
+    "maquillaje1 maquillaje2"
+    "maquillaje3 maquillaje4"
+    "maquillaje5 maquillaje6";
+}
+
+.maquillaje1 {
+    grid-area: maquillaje1;
+}
+.maquillaje2 {
+    grid-area: maquillaje2;
+}
+.maquillaje3 {
+    grid-area: maquillaje3;
+}
+.maquillaje4 {
+    grid-area: maquillaje4;
+}
+.maquillaje5 {
+    grid-area: maquillaje5;
+}
+
+
+/* para tablet */
+
+@media (min-width:650px) and (max-width: 1000px) {
+
+    .img-maquillajes{
+        justify-items: left;
+    }
+}
+
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .img-maquillajes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* -------------------------------- quinta página -------------------------- */
+
+
+.titulo-contacto {
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.formularios {
+    line-height: 30px;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.direccion {
+    justify-items: center;
+}
+
+
+/* para movil */
+
+@media (max-width: 650px) {
+    .direccion {
+    display: none;
+}
+}
